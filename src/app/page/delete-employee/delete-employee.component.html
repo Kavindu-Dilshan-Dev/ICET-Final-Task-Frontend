@@ -2,7 +2,7 @@
   <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
+         
           <th scope="col">Name</th>
           <th scope="col">Email</th>
           <th scope="col">Department</th>
@@ -11,41 +11,17 @@
           <th scope="col"></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody  *ngFor="let employee of listOfEmployees">
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>mdo</td>
-          <td>mdo</td>
-          <td>mdo</td>
-          <td>
-            <button class="btn btn-danger">Delete</button>
-          </td>
+        
+          <td>{{employee.name}}</td>
+          <td>{{employee.email}}</td>
+          <td>{{employee.department}}</td>
+          <td>{{employee.createdDate}}</td>
+          <td>{{employee.lastUpdatedDate}}</td>
+          <td><button class="btn btn-danger" (click)="deleteEmployee(employee.email)">Delete</button></td>
         </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>mdo</td>
-          <td>mdo</td>
-          <td>mdo</td>
-          <td>
-            <button class="btn btn-danger">Delete</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>mdo</td>
-          <td>mdo</td>
-          <td>mdo</td>
-          <td>
-            <button class="btn btn-danger">Delete</button>
-          </td>
-        </tr>
-       
+     
       </tbody>
     </table>
 </div>

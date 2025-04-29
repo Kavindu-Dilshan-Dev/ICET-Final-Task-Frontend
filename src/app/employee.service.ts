@@ -38,4 +38,8 @@ export class EmployeeService {
     return this.http.post<Employee>(this.baseUrl, updateEmployee, httpOptions);
   }
 
+  deleteEmployee(id: string): Observable<any> {
+    return this.http.delete(this.baseUrl);
+  }
+
 }
