@@ -1,51 +1,27 @@
 <div class="container">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Department</th>
-            <th scope="col">Created Date</th>
-            <th scope="col">Last Update Date</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>
-              <button class="btn btn-secondary">Update</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>
-              <button class="btn btn-secondary">Update</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>mdo</td>
-            <td>
-              <button class="btn btn-secondary">Update</button>
-            </td>
-          </tr>
+  <table class="table">
+      <thead>
+        <tr>
          
-        </tbody>
-      </table>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Department</th>
+          <th scope="col">Created Date</th>
+          <th scope="col">Last Update Date</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody  *ngFor="let employee of listOfEmployees">
+        <tr>
+        
+          <td>{{employee.name}}</td>
+          <td>{{employee.email}}</td>
+          <td>{{employee.department}}</td>
+          <td>{{employee.createdDate}}</td>
+          <td>{{employee.lastUpdatedDate}}</td>
+          <td><button class="btn btn-secondary" (click)="updateEmployee()">Update</button></td>
+        </tr>
+     
+      </tbody>
+    </table>
 </div>

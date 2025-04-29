@@ -14,7 +14,6 @@ export class RegisterComponent {
 constructor(private readonly employeeService: EmployeeService){}
 
   newEmployee: Employee = {
-    id: 0,
     name: '',
     email: '',
     department: '',
@@ -23,7 +22,6 @@ constructor(private readonly employeeService: EmployeeService){}
   }
 
   registerUser() {
-    this.newEmployee.id++;
     this.employeeService.addEmployee(this.newEmployee).subscribe({
       next: (response) => {
         console.log('employee added success',response);

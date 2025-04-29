@@ -19,12 +19,23 @@ export class EmployeeService {
 
 
   addEmployee(newEmployee: Employee): Observable<Employee> {
+    
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
       }),
     };
     return this.http.post<Employee>(this.baseUrl, newEmployee, httpOptions);
+  }
+
+  updateEmployee(updateEmployee: Employee): Observable<Employee> {
+    
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+    };
+    return this.http.post<Employee>(this.baseUrl, updateEmployee, httpOptions);
   }
 
 }
